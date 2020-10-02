@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/home/components/product_card.dart';
 import 'package:e_commerce_app/home/components/section_title.dart';
 import 'package:e_commerce_app/models/products.dart';
+import 'package:e_commerce_app/ui/details/details_screen.dart';
 import 'package:flutter/material.dart';
 
 class PopularProducts extends StatelessWidget {
@@ -20,7 +21,13 @@ class PopularProducts extends StatelessWidget {
         child: Row(children: [
           ...List.generate(
             demoProducts.length,
-            (index) => ProductCart(product: demoProducts[index]),
+            (index) => ProductCart(
+                product: demoProducts[index],
+                press: () =>
+                    Navigator.pushNamed(context, DetailsScreen.routeName,
+                        arguments: ProductDetailsArguments(
+                          product: demoProducts[index],
+                        ))),
           ),
           SizedBox(
             width: 20,

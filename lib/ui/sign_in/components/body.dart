@@ -8,7 +8,6 @@ import 'package:e_commerce_app/ui/sign_in/components/socialCard.dart';
 import 'package:e_commerce_app/ui/sign_up/sign_up_screen.dart';
 import 'package:e_commerce_app/ui/splash/components/default_Button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   @override
